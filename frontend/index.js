@@ -96,6 +96,7 @@ function moduleProject2() {
               }
               break;
     }
+  });  
     function changeHighlight(newTarget) {
       document.querySelector('.square.targeted').classList.remove('targeted');
       newTarget.classList.add('targeted');
@@ -112,11 +113,11 @@ function moduleProject2() {
           targetedSquare.style.backgroundColor = 'red';
         }
       }
-    }
+    });
     // 👉 TASK 5 - End the game 👈
     function endGame() {
       const timeElapsed = getTimeElapsed();
-      document.querySelector('p.info').textContent = 'Extermination completed in ${Math.floor(timeElapsed / 1000)} seconds!';
+      document.querySelector('p.info').textContent = `Extermination completed in ${Math.floor(timeElapsed / 1000)} seconds!`;
       const restartButton = document.createElement('button');
       restartButton.textContent = 'Restart';
       restartButton.addEventListener('click', () => window.location.reload());
